@@ -6,25 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/alexandra/Desktop/Tema1_IEP/src/Car.cpp
+/home/alexandra/Desktop/Tema2_IEP/src/Car.cpp
 iostream
 -
 
-/home/alexandra/Desktop/Tema1_IEP/src/Car1.cpp
+/home/alexandra/Desktop/Tema2_IEP/src/Car1.cpp
 iostream
 -
 
-/home/alexandra/Desktop/Tema1_IEP/src/Main.cpp
+/home/alexandra/Desktop/Tema2_IEP/src/Main.cpp
 Car1.cpp
-/home/alexandra/Desktop/Tema1_IEP/src/Car1.cpp
+/home/alexandra/Desktop/Tema2_IEP/src/Car1.cpp
 SUV.cpp
-/home/alexandra/Desktop/Tema1_IEP/src/SUV.cpp
+/home/alexandra/Desktop/Tema2_IEP/src/SUV.cpp
 iostream
 -
+memory
+-
 
-/home/alexandra/Desktop/Tema1_IEP/src/SUV.cpp
+/home/alexandra/Desktop/Tema2_IEP/src/SUV.cpp
 iostream
 -
 Car.cpp
-/home/alexandra/Desktop/Tema1_IEP/src/Car.cpp
+/home/alexandra/Desktop/Tema2_IEP/src/Car.cpp
 

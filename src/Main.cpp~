@@ -1,9 +1,12 @@
-#include "Car1.cpp"
-#include "SUV.cpp"
+#include "Mutex.cpp"
 #include<iostream>
+#include<memory>
+Car* createCar(){
+	return (new Car("Opel","red",2020,1500));
+}
 int main()
 {
-    Car car1("Opel","red",2015,2000);
+    /*Car car1("Opel","red",2015,2000);
     car1.getName();
     car1.getWheels();
     car1.setPrice(2500);
@@ -35,9 +38,31 @@ int main()
 	e=d;//copy assignment operator
 	std::cout<<std::endl<<"On object e: "<<std::endl;
 	e.getWheels();
-	e.getName();
+	e.getName();//it is Toyota Yaris because in the base class the copy assignement operator does not set the name
 	SUV f=d;//copy constructor
 	std::cout<<std::endl<<"On object f: "<<std::endl;
 	f.getWheels();
-	f.getName();
+	f.getName();//item 12
+        */
+	
+	std::unique_ptr<Car> car6(createCar());
+	car6->getWheels();
+	std::unique_ptr<Car> car7 = move(car6);
+	//car6->getWheels();
+	car7->getWheels();
+	
+	std::shared_ptr<Car> car8(createCar());
+	car8->getWheels();
+	std::cout<<"car8 count: "<<car8.use_count()<<std::endl;
+	std::shared_ptr<Car> car9 = move(car8);
+	std::cout<<"car8 count: "<<car8.use_count()<<std::endl;
+	std::cout<<"car9 count: "<<car9.use_count()<<std::endl;
+	car9->getWheels();
+
+        Car car10("Toyota","green",2018,2500);
+        Lock *lockedCarRes = new Lock(car10);
+        car10.askResource();
+        delete lockedCarRes;
+        car10.askResource();
+	
 }

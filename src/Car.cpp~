@@ -1,11 +1,12 @@
 #include<iostream>
 class Car{
-    private:
+    protected:
     std::string name;
     std::string colour;
     int year;
     float price;
     int wheels=4;
+    bool isLocked=false;
 
     public:
     Car(const std::string& name,const std::string& colour,int year,float price) //constuctor that uses member initialization list(initialization not assignment)
@@ -20,12 +21,14 @@ class Car{
         this->colour=a_car.colour;
         this->year=a_car.year;
         this->price=a_car.price;
+        this->wheels=a_car.wheels;
     }
 
     Car& operator=(const Car& a_car){ //copy assignment operator
 	    if(this == &a_car)//assignment to self was attempted
 		   return *this;
         this->price=a_car.price;
+        this->wheels=a_car.wheels;
 		return *this;
     }
 	
@@ -56,5 +59,14 @@ class Car{
     void setPrice(int price){
         this->price = price;
     }
-    
+    void setisLocked(bool is_isnot){
+      this->isLocked = is_isnot;
+    }
+    void askResource(){
+        if(this->isLocked){
+            std::cout<<"Resource is locked!"<<std::endl;
+        }else{
+            std::cout<<"Resource can be used :)"<<std::endl;
+        }
+    }
 };

@@ -6,6 +6,7 @@ class Car{
     int year;
     float price;
     int wheels=4;
+    bool isLocked=false;
 
     public:
     Car(const std::string& name,const std::string& colour,int year,float price) //constuctor that uses member initialization list(initialization not assignment)
@@ -58,5 +59,14 @@ class Car{
     void setPrice(int price){
         this->price = price;
     }
-    
+    void setisLocked(bool is_isnot){
+      this->isLocked = is_isnot;
+    }
+    void askResource(){
+        if(this->isLocked){
+            std::cout<<"Resource is locked!"<<std::endl;
+        }else{
+            std::cout<<"Resource can be used :)"<<std::endl;
+        }
+    }
 };
