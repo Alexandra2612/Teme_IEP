@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alexandra/Desktop/Proiect_IEP_sapt6/src/Car.cpp
+iostream
+-
+
+/home/alexandra/Desktop/Proiect_IEP_sapt6/src/Car1.cpp
+iostream
+-
+

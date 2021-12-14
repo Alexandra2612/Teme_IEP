@@ -1,0 +1,2 @@
+/home/alexandra/Desktop/Proiect_IEP_sapt6/build/CMakeFiles/cars.dir
+/home/alexandra/Desktop/Proiect_IEP_sapt6/build/CMakeFiles/lib.dir

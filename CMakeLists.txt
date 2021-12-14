@@ -1,0 +1,20 @@
+#cmake version
+cmake_minimum_required(VERSION 2.8)
+
+set(my_project "cars")
+#project name
+project(${my_project})
+
+set(myfiles src/Car1.cpp src/Car.cpp)
+
+add_library(lib STATIC ${myfiles})
+
+#define executable
+add_executable(${my_project} src/Main.cpp)
+
+target_link_libraries(${my_project} PUBLIC lib)
+
+target_include_directories(${my_project}
+ PRIVATE src INTERFACE
+     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc>
+     $<INSTALL_INTERFACE:inc>)
