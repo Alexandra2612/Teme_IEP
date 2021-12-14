@@ -1,6 +1,7 @@
 FILE(REMOVE_RECURSE
   "CMakeFiles/lib.dir/src/Car1.cpp.o"
   "CMakeFiles/lib.dir/src/Car.cpp.o"
+  "CMakeFiles/lib.dir/src/SUV.cpp.o"
   "liblib.pdb"
   "liblib.a"
 )

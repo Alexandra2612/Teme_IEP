@@ -1,6 +1,6 @@
 #include<iostream>
 class Car{
-    private:
+    protected:
     std::string name;
     std::string colour;
     int year;
@@ -20,10 +20,20 @@ class Car{
         this->colour=a_car.colour;
         this->year=a_car.year;
         this->price=a_car.price;
+        this->wheels=a_car.wheels;
     }
 
     Car& operator=(const Car& a_car){ //copy assignment operator
+	    if(this == &a_car)//assignment to self was attempted
+		   return *this;
         this->price=a_car.price;
+        this->wheels=a_car.wheels;
+		return *this;
+    }
+	
+	Car& operator+=(const Car& a_car){ //copy assignment operator
+        this->price+=a_car.price;
+		return *this;
     }
 
     ~Car(){
@@ -41,6 +51,9 @@ class Car{
     int getWheels(){
         std::cout << "Number of wheels is:"<<wheels<<std::endl;
         return this->wheels;
+    }
+	void setWheels(int wheels){
+        this->wheels=wheels;
     }
     void setPrice(int price){
         this->price = price;

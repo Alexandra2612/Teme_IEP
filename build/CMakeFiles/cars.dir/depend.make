@@ -4,4 +4,5 @@
 CMakeFiles/cars.dir/src/Main.cpp.o: ../src/Car.cpp
 CMakeFiles/cars.dir/src/Main.cpp.o: ../src/Car1.cpp
 CMakeFiles/cars.dir/src/Main.cpp.o: ../src/Main.cpp
+CMakeFiles/cars.dir/src/Main.cpp.o: ../src/SUV.cpp
 

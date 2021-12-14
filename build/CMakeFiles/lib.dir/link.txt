@@ -1,2 +1,2 @@
-/usr/bin/ar cr liblib.a  CMakeFiles/lib.dir/src/Car1.cpp.o CMakeFiles/lib.dir/src/Car.cpp.o
+/usr/bin/ar cr liblib.a  CMakeFiles/lib.dir/src/Car1.cpp.o CMakeFiles/lib.dir/src/Car.cpp.o CMakeFiles/lib.dir/src/SUV.cpp.o
 /usr/bin/ranlib liblib.a

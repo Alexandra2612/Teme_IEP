@@ -39,10 +39,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alexandra/Desktop/Proiect_IEP_sapt6
+CMAKE_SOURCE_DIR = /home/alexandra/Desktop/Tema1_IEP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alexandra/Desktop/Proiect_IEP_sapt6/build
+CMAKE_BINARY_DIR = /home/alexandra/Desktop/Tema1_IEP/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -69,9 +69,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/Desktop/Proiect_IEP_sapt6/build/CMakeFiles /home/alexandra/Desktop/Proiect_IEP_sapt6/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/Desktop/Tema1_IEP/build/CMakeFiles /home/alexandra/Desktop/Tema1_IEP/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/Desktop/Proiect_IEP_sapt6/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alexandra/Desktop/Tema1_IEP/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -196,6 +196,30 @@ src/Main.cpp.s:
 	$(MAKE) -f CMakeFiles/cars.dir/build.make CMakeFiles/cars.dir/src/Main.cpp.s
 .PHONY : src/Main.cpp.s
 
+src/SUV.o: src/SUV.cpp.o
+.PHONY : src/SUV.o
+
+# target to build an object file
+src/SUV.cpp.o:
+	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/src/SUV.cpp.o
+.PHONY : src/SUV.cpp.o
+
+src/SUV.i: src/SUV.cpp.i
+.PHONY : src/SUV.i
+
+# target to preprocess a source file
+src/SUV.cpp.i:
+	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/src/SUV.cpp.i
+.PHONY : src/SUV.cpp.i
+
+src/SUV.s: src/SUV.cpp.s
+.PHONY : src/SUV.s
+
+# target to generate assembly for a file
+src/SUV.cpp.s:
+	$(MAKE) -f CMakeFiles/lib.dir/build.make CMakeFiles/lib.dir/src/SUV.cpp.s
+.PHONY : src/SUV.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -215,6 +239,9 @@ help:
 	@echo "... src/Main.o"
 	@echo "... src/Main.i"
 	@echo "... src/Main.s"
+	@echo "... src/SUV.o"
+	@echo "... src/SUV.i"
+	@echo "... src/SUV.s"
 .PHONY : help
 
 
